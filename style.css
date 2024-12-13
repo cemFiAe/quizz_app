@@ -7,6 +7,13 @@ main{
     justify-content: center;
     align-items: center;
 }
+.progress{
+    margin-top: 2px;
+    width: 100%;
+}
+.progress-bar{
+    width: 10%;
+}
 .quiz_card{
     width: 25rem;
 }
@@ -43,6 +50,22 @@ main{
     background-color: red !important;
     color: white !important;
 }
+.endQuiz{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.endQuiz img{
+    width: 100%;
+}
+.endQuiz_button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
 
 @media screen and (max-width: 500px) {
     .quiz_card{
@@ -65,14 +88,25 @@ main{
     }
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 360px) {
     .card-title{
-        font-size: 18px;
+        font-size: 12px;
     }
     .question_body{
-        font-size: 14px;
+        height: 60px;
+        font-size: 12px;
     }
     .question_footer{
-        font-size: 14px;
+        font-size: 12px;
+    }
+    .question_footer button{
+        width: 80px;
+        font-size: 8px;
+    }
+    .quiz_card{
+        width: 12rem;
+    }
+    .endQuiz h2{
+        font-size: 12px;
     }
 }

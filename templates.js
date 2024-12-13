@@ -1,9 +1,14 @@
-function getCardTemplate(index) {
+function getCardTemplate(index, percent) {
     const question = questions[index];
     return /*html*/ `
         <div class="card quiz_card">
-            <img src="./img/education.jpg" class="card-img-top" alt="Education">
-            <div class="card-body">
+            <img src="./img/education.jpg" class="card-img-top" id="card-img-top" alt="Education">
+            
+            <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" id="progress-bar" style="width: ${percent}%">${percent}%</div>
+            </div>
+            
+            <div class="card-body" id="card-body">
                 <h5 class="card-title">${question.question}</h5>
                 <div id="answers-container">
                     ${[1, 2, 3, 4].map(i => `
